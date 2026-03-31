@@ -1,5 +1,15 @@
 # Strux
 
+> **Strux** is a mini ontology-based decision support system for student career guidance.  
+> For a deep dive into the design philosophy and detailed ontology structure, refer to the documentation below:
+
+| Detailed Documentation | Link |
+| :--- | :--- |
+| **Korean Version** | [![KO](https://img.shields.io/badge/lang-ko-blue.svg)](https://knowing-eris-3ca.notion.site/ontology-Strux-333d8b485f828026ba64ca8d7cd5b0ea) |
+| **English Version** | [![EN](https://img.shields.io/badge/lang-en-red.svg)](https://knowing-eris-3ca.notion.site/ontology-Strux-English-334d8b485f8280d88723ca04f3a69da0) |
+
+---
+
 Strux is a mini ontology-based decision support system for student career guidance.
 
 Its goal is not to treat rows, files, or scores as the essence of the problem. It treats them as raw signals that must be interpreted into entities and relations about the real world:
