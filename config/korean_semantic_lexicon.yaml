@@ -1,0 +1,389 @@
+entries:
+  - entity_type: skill
+    canonical_name: Mathematics
+    cues:
+      - text: 수학적 사고
+        weight: 0.95
+        rationale: 수학적 사고는 정량 추론과 수리 모델링을 직접 시사합니다.
+      - text: 수학
+        weight: 0.6
+        rationale: 수학 표현은 Mathematics 본질과 직접 연결됩니다.
+      - text: 수리적
+        weight: 0.7
+        rationale: 수리적 표현은 수량화와 계산 역량을 드러냅니다.
+      - text: 확률
+        weight: 0.55
+        rationale: 확률 표현은 수학적 추론의 단서입니다.
+      - text: 통계
+        weight: 0.5
+        rationale: 통계 표현은 수학 기반 해석 역량과 맞닿아 있습니다.
+    composites:
+      - all_of: [수학, 사고]
+        weight: 0.35
+        rationale: 수학과 사고가 함께 나타나 정량 추론 성향이 강화됩니다.
+
+  - entity_type: skill
+    canonical_name: Programming
+    cues:
+      - text: 알고리즘
+        weight: 0.85
+        rationale: 알고리즘 표현은 프로그래밍적 구현 사고를 강하게 시사합니다.
+      - text: 코딩
+        weight: 0.8
+        rationale: 코딩은 Programming 본질과 직접 연결됩니다.
+      - text: 프로그래밍
+        weight: 0.8
+        rationale: 프로그래밍 표현은 직접적인 역량 신호입니다.
+      - text: 파이썬
+        weight: 0.75
+        rationale: 파이썬은 구현 중심 프로그래밍 활동의 대표 신호입니다.
+      - text: 구현
+        weight: 0.55
+        rationale: 구현 표현은 코드 작성 맥락을 시사합니다.
+    composites:
+      - all_of: [알고리즘, 문제]
+        weight: 0.25
+        rationale: 알고리즘과 문제가 함께 나타나면 구현형 사고로 해석됩니다.
+
+  - entity_type: skill
+    canonical_name: Critical Thinking
+    cues:
+      - text: 비판적 사고
+        weight: 0.95
+        rationale: 비판적 사고는 Critical Thinking과 직접 연결됩니다.
+      - text: 논리적 사고
+        weight: 0.9
+        rationale: 논리적 사고는 판단과 추론의 핵심 단서입니다.
+      - text: 분석적
+        weight: 0.65
+        rationale: 분석적 태도는 논리적 판단 역량을 시사합니다.
+      - text: 판단
+        weight: 0.5
+        rationale: 판단 표현은 사고 기반 해석과 연결됩니다.
+      - text: 원인을 파악
+        weight: 0.7
+        rationale: 원인 파악은 분석적 추론을 의미합니다.
+    composites:
+      - all_of: [문제, 해결]
+        weight: 0.8
+        rationale: 문제와 해결이 함께 나타나면 핵심적으로 Critical Thinking이 활성화됩니다.
+      - all_of: [논리, 분석]
+        weight: 0.45
+        rationale: 논리와 분석이 함께 나오면 비판적 사고 신호가 강화됩니다.
+
+  - entity_type: skill
+    canonical_name: Data Analysis and Visualization
+    cues:
+      - text: 데이터 분석
+        weight: 0.95
+        rationale: 데이터 분석은 해당 역량의 직접 표현입니다.
+      - text: 시각화
+        weight: 0.75
+        rationale: 시각화는 데이터 해석 결과를 표현하는 핵심 단서입니다.
+      - text: 대시보드
+        weight: 0.7
+        rationale: 대시보드는 데이터 시각화 맥락과 연결됩니다.
+      - text: 인사이트
+        weight: 0.55
+        rationale: 인사이트 도출은 데이터 분석의 목적과 연결됩니다.
+    composites:
+      - all_of: [데이터, 분석]
+        weight: 0.4
+        rationale: 데이터와 분석이 동시에 나타나면 직접적인 데이터 해석 맥락입니다.
+
+  - entity_type: skill
+    canonical_name: Statistical Analysis
+    cues:
+      - text: 통계 분석
+        weight: 0.95
+        rationale: 통계 분석은 Statistical Analysis의 직접 표현입니다.
+      - text: 통계
+        weight: 0.75
+        rationale: 통계는 정량적 분석과 추론의 핵심 신호입니다.
+      - text: 회귀
+        weight: 0.7
+        rationale: 회귀는 전형적인 통계 분석 표현입니다.
+      - text: 가설 검정
+        weight: 0.75
+        rationale: 가설 검정은 통계적 의사결정의 직접 증거입니다.
+
+  - entity_type: skill
+    canonical_name: Machine Learning
+    cues:
+      - text: 머신러닝
+        weight: 0.95
+        rationale: 머신러닝은 해당 역량의 직접 표현입니다.
+      - text: 기계학습
+        weight: 0.95
+        rationale: 기계학습은 Machine Learning의 한국어 표현입니다.
+      - text: 예측 모델
+        weight: 0.7
+        rationale: 예측 모델은 머신러닝 활용 맥락으로 해석됩니다.
+      - text: 분류 모델
+        weight: 0.65
+        rationale: 분류 모델 표현은 머신러닝 맥락을 시사합니다.
+
+  - entity_type: skill
+    canonical_name: Communication
+    cues:
+      - text: 발표
+        weight: 0.8
+        rationale: 발표는 전달과 설명 역량을 직접 시사합니다.
+      - text: 소통
+        weight: 0.75
+        rationale: 소통은 Communication의 핵심 단서입니다.
+      - text: 설명
+        weight: 0.6
+        rationale: 설명 행위는 전달 중심 역량과 연결됩니다.
+      - text: 커뮤니케이션
+        weight: 0.85
+        rationale: 커뮤니케이션은 직접적인 역량 표기입니다.
+
+  - entity_type: skill
+    canonical_name: Project Management
+    cues:
+      - text: 프로젝트 관리
+        weight: 0.95
+        rationale: 프로젝트 관리는 직접적인 역량 표현입니다.
+      - text: 일정 관리
+        weight: 0.75
+        rationale: 일정 관리는 프로젝트 운영 역량을 시사합니다.
+      - text: 팀 조율
+        weight: 0.7
+        rationale: 팀 조율은 실행과 협업 관리의 신호입니다.
+      - text: 리딩
+        weight: 0.55
+        rationale: 리딩은 프로젝트 추진 역할과 연결됩니다.
+
+  - entity_type: skill
+    canonical_name: Cybersecurity
+    cues:
+      - text: 보안
+        weight: 0.8
+        rationale: 보안은 Cybersecurity의 직접적 단서입니다.
+      - text: 취약점
+        weight: 0.7
+        rationale: 취약점 분석은 보안 역량을 시사합니다.
+      - text: 해킹
+        weight: 0.65
+        rationale: 해킹 맥락은 보안 활동과 직접 연결됩니다.
+      - text: 침해 대응
+        weight: 0.75
+        rationale: 침해 대응은 보안 직무와 핵심적으로 연결됩니다.
+
+  - entity_type: skill
+    canonical_name: Web Development
+    cues:
+      - text: 웹 개발
+        weight: 0.95
+        rationale: 웹 개발은 직접적인 기술 역량 표현입니다.
+      - text: 프론트엔드
+        weight: 0.7
+        rationale: 프론트엔드는 웹 개발 맥락을 시사합니다.
+      - text: 백엔드
+        weight: 0.7
+        rationale: 백엔드는 웹 서비스 구현 맥락과 연결됩니다.
+      - text: 웹 서비스
+        weight: 0.6
+        rationale: 웹 서비스 구축은 웹 개발 역량으로 해석됩니다.
+
+  - entity_type: skill
+    canonical_name: Database Development
+    cues:
+      - text: 데이터베이스
+        weight: 0.85
+        rationale: 데이터베이스 표현은 직접적인 DB 역량 신호입니다.
+      - text: db 설계
+        weight: 0.7
+        rationale: 설계 표현은 데이터 구조화 역량을 시사합니다.
+      - text: sql
+        weight: 0.75
+        rationale: SQL은 데이터베이스 개발과 직접 연결됩니다.
+
+  - entity_type: activity
+    canonical_name: Data Analysis Project
+    cues:
+      - text: 데이터 분석 프로젝트
+        weight: 0.95
+        rationale: 데이터 분석 프로젝트는 해당 활동의 직접 표기입니다.
+      - text: 통계 프로젝트
+        weight: 0.8
+        rationale: 통계 프로젝트는 Data Analysis Project로 수렴됩니다.
+      - text: 시각화 프로젝트
+        weight: 0.75
+        rationale: 시각화 프로젝트는 데이터 해석 활동으로 연결됩니다.
+    composites:
+      - all_of: [프로젝트, 데이터]
+        weight: 0.35
+        rationale: 프로젝트와 데이터가 함께 나타나면 데이터 분석 활동일 가능성이 높습니다.
+      - all_of: [프로젝트, 통계]
+        weight: 0.35
+        rationale: 프로젝트와 통계가 함께 나타나면 분석 활동 맥락이 강화됩니다.
+
+  - entity_type: activity
+    canonical_name: Research Project
+    cues:
+      - text: 연구 프로젝트
+        weight: 0.95
+        rationale: 연구 프로젝트는 해당 활동의 직접 표기입니다.
+      - text: 리서치
+        weight: 0.7
+        rationale: 리서치는 탐구 중심 활동의 단서입니다.
+      - text: 논문
+        weight: 0.7
+        rationale: 논문 작업은 연구 활동과 연결됩니다.
+    composites:
+      - all_of: [연구, 프로젝트]
+        weight: 0.4
+        rationale: 연구와 프로젝트가 함께 있으면 Research Project로 해석할 수 있습니다.
+
+  - entity_type: activity
+    canonical_name: Hackathon
+    cues:
+      - text: 해커톤
+        weight: 0.95
+        rationale: 해커톤은 직접적인 활동 표기입니다.
+      - text: 서비스 제작 대회
+        weight: 0.7
+        rationale: 단기간 서비스 제작 대회는 해커톤 맥락과 가깝습니다.
+
+  - entity_type: activity
+    canonical_name: Open Source Contribution
+    cues:
+      - text: 오픈소스
+        weight: 0.95
+        rationale: 오픈소스 표현은 해당 활동과 직접 연결됩니다.
+      - text: 깃허브 기여
+        weight: 0.75
+        rationale: 깃허브 기여는 공개 협업 프로젝트 맥락입니다.
+      - text: pull request
+        weight: 0.7
+        rationale: pull request는 오픈소스 기여의 직접적 행위입니다.
+
+  - entity_type: activity
+    canonical_name: Cybersecurity CTF
+    cues:
+      - text: ctf
+        weight: 0.95
+        rationale: CTF는 보안 문제 해결 활동을 직접 의미합니다.
+      - text: 보안 대회
+        weight: 0.75
+        rationale: 보안 대회는 Cybersecurity CTF와 가까운 활동입니다.
+
+  - entity_type: activity
+    canonical_name: Case Competition
+    cues:
+      - text: 케이스 대회
+        weight: 0.95
+        rationale: 케이스 대회는 해당 활동의 직접 표기입니다.
+      - text: 케이스 스터디 대회
+        weight: 0.85
+        rationale: 케이스 스터디 대회는 Case Competition으로 수렴됩니다.
+
+  - entity_type: career
+    canonical_name: Data Scientists
+    cues:
+      - text: 데이터 과학자
+        weight: 0.95
+        rationale: 데이터 과학자는 O*NET의 Data Scientists와 직접 연결됩니다.
+      - text: 데이터 사이언티스트
+        weight: 0.95
+        rationale: 음역 표현도 동일한 진로 본질을 가리킵니다.
+
+  - entity_type: career
+    canonical_name: Software Developers
+    cues:
+      - text: 소프트웨어 개발자
+        weight: 0.95
+        rationale: 소프트웨어 개발자는 O*NET 직업명과 직접 대응됩니다.
+      - text: 개발자
+        weight: 0.7
+        rationale: 개발자 표현은 Software Developers로 우선 해석됩니다.
+      - text: 프로그래머
+        weight: 0.75
+        rationale: 프로그래머는 구현 중심 개발 직무와 강하게 연결됩니다.
+
+  - entity_type: career
+    canonical_name: Information Security Analysts
+    cues:
+      - text: 정보보안 분석가
+        weight: 0.95
+        rationale: 정보보안 분석가는 해당 직무와 직접 대응됩니다.
+      - text: 보안 분석가
+        weight: 0.9
+        rationale: 보안 분석가 표현은 정보보안 직무를 직접 시사합니다.
+      - text: 보안 직무
+        weight: 0.7
+        rationale: 보안 직무 표현은 Information Security Analysts와 가까운 진로 신호입니다.
+
+  - entity_type: major
+    canonical_name: Data Science
+    cues:
+      - text: 데이터사이언스 전공
+        weight: 0.95
+        rationale: 직접적인 전공 표기입니다.
+      - text: 데이터 과학 전공
+        weight: 0.95
+        rationale: 한국어 표현도 동일한 전공 본질을 가리킵니다.
+      - text: 데이터사이언스
+        weight: 0.8
+        rationale: 축약 표현도 Data Science 전공으로 수렴됩니다.
+
+  - entity_type: major
+    canonical_name: Computer Science
+    cues:
+      - text: 컴퓨터공학
+        weight: 0.95
+        rationale: 컴퓨터공학은 Computer Science 전공과 직접 연결됩니다.
+      - text: 컴공
+        weight: 0.85
+        rationale: 컴공은 대표적인 약칭입니다.
+      - text: 소프트웨어학과
+        weight: 0.75
+        rationale: 소프트웨어학과는 Computer Science 계열 전공으로 해석됩니다.
+
+  - entity_type: major
+    canonical_name: Cybersecurity
+    cues:
+      - text: 정보보안 전공
+        weight: 0.95
+        rationale: 정보보안 전공은 Cybersecurity 전공 본질과 직접 연결됩니다.
+      - text: 사이버보안 전공
+        weight: 0.95
+        rationale: 한국어 표현이 동일한 전공을 가리킵니다.
+
+  - entity_type: major
+    canonical_name: Business Administration
+    cues:
+      - text: 경영학
+        weight: 0.9
+        rationale: 경영학은 Business Administration 전공과 직접 연결됩니다.
+      - text: 경영 전공
+        weight: 0.85
+        rationale: 경영 전공은 해당 전공 본질의 직접 표기입니다.
+
+  - entity_type: trait
+    canonical_name: Investigative
+    cues:
+      - text: 탐구
+        weight: 0.7
+        rationale: 탐구 성향은 Investigative 성향과 직접 연결됩니다.
+      - text: 파고드는
+        weight: 0.6
+        rationale: 깊게 파고드는 표현은 탐구형 성향의 단서입니다.
+      - text: 분석하는 것이 즐겁다
+        weight: 0.75
+        rationale: 분석 과정 자체를 즐긴다는 표현은 Investigative 성향과 맞닿아 있습니다.
+
+  - entity_type: trait
+    canonical_name: Innovation
+    cues:
+      - text: 새로운 방식
+        weight: 0.75
+        rationale: 새로운 방식 선호는 Innovation 성향과 연결됩니다.
+      - text: 창의적
+        weight: 0.8
+        rationale: 창의적 표현은 Innovation 성향의 직접 단서입니다.
+      - text: 실험하는 것이 즐겁다
+        weight: 0.75
+        rationale: 실험을 즐기는 태도는 Innovation 성향과 맞닿아 있습니다.

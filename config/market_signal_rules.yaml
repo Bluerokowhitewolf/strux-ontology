@@ -1,0 +1,83 @@
+rules:
+  - name: analytics_tools
+    patterns:
+      - power bi
+      - tableau
+      - business intelligence
+      - analytics
+      - analysis software
+      - spreadsheet
+      - excel
+      - dataviz
+    skills:
+      Data Analysis and Visualization: 1.0
+      Statistical Analysis: 0.55
+
+  - name: data_platforms
+    patterns:
+      - spark
+      - hadoop
+      - big data
+      - data base management
+      - database
+      - query software
+      - query
+      - warehouse
+    skills:
+      Data Engineering: 1.0
+      Database Development: 0.9
+      Data Analysis and Visualization: 0.45
+
+  - name: programming_stack
+    patterns:
+      - python
+      - java
+      - c++
+      - git
+      - github
+      - object oriented
+      - versioning
+      - development environment
+      - development software
+    skills:
+      Programming: 1.0
+      Object Oriented Programming: 0.8
+      Systems Analysis: 0.35
+
+  - name: cloud_stack
+    patterns:
+      - aws
+      - azure
+      - cloud
+      - kubernetes
+      - distributed
+    skills:
+      Cloud Computing: 1.0
+      Data Engineering: 0.75
+      Systems Analysis: 0.45
+
+  - name: machine_learning_stack
+    patterns:
+      - machine learning
+      - tensorflow
+      - pytorch
+      - scikit
+      - model training
+      - predictive
+    skills:
+      Machine Learning: 1.0
+      Statistical Analysis: 0.6
+      Programming: 0.45
+
+  - name: statistical_stack
+    patterns:
+      - statistical
+      - statistics
+      - sas
+      - spss
+      - r software
+      - spreadsheet
+    skills:
+      Statistical Analysis: 1.0
+      Mathematics: 0.6
+      Data Analysis and Visualization: 0.45

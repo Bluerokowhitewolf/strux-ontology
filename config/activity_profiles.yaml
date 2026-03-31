@@ -1,0 +1,127 @@
+activities:
+  - name: Hackathon
+    description: Short-cycle collaborative product building under time pressure.
+    develops_skills:
+      Web Development: 0.8
+      Mobile App Development: 0.6
+      System Design: 0.7
+      Communication: 0.5
+      Adaptability: 0.6
+    supports_majors:
+      - Computer Science
+      - Information Systems
+    supports_careers:
+      - Software Development and Engineering
+      - Development
+  - name: Open Source Contribution
+    description: Contributing code, documentation, and reviews to shared software projects.
+    develops_skills:
+      Programming: 0.8
+      Web Development: 0.6
+      System Design: 0.5
+      Communication: 0.5
+    supports_majors:
+      - Computer Science
+    supports_careers:
+      - Software Development and Engineering
+  - name: Data Analysis Project
+    description: Cleaning data, building insight, and presenting evidence from analysis.
+    develops_skills:
+      Data Analysis and Visualization: 0.9
+      Feature Engineering: 0.7
+      Communication: 0.5
+      Problem Solving and Analysis: 0.6
+    supports_majors:
+      - Data Science
+      - Finance
+    supports_careers:
+      - Data Science
+      - FINANCE
+  - name: Research Project
+    description: Inquiry-driven project with literature review, experimentation, and interpretation.
+    develops_skills:
+      Machine Learning: 0.6
+      Deep Learning: 0.4
+      Critical Thinking: 0.7
+      Communication: 0.5
+      Data Analysis and Visualization: 0.5
+    supports_majors:
+      - Data Science
+      - Computer Science
+    supports_careers:
+      - Artificial Intelligence
+      - Data Science
+  - name: Cybersecurity CTF
+    description: Capture-the-flag competition focused on security exploitation and defense.
+    develops_skills:
+      Cybersecurity: 0.9
+      Network Security: 0.8
+      Operating Systems and Networking: 0.7
+      Problem Solving and Analysis: 0.6
+    supports_majors:
+      - Cybersecurity
+      - Computer Science
+    supports_careers:
+      - Security
+      - INFORMATION-TECHNOLOGY
+  - name: UX Portfolio Studio
+    description: Iterative interface design with research, wireframing, and critique.
+    develops_skills:
+      UI/UX Knowledge: 0.9
+      Graphic Design: 0.7
+      Communication: 0.5
+    supports_majors:
+      - Graphic Design and UX
+    supports_careers:
+      - User Experience (UX) and User Interface (UI) Design
+  - name: Case Competition
+    description: Team-based business problem framing, presentation, and decision support.
+    develops_skills:
+      Project Management: 0.6
+      Communication: 0.8
+      Financial Analysis: 0.5
+      Problem Solving and Analysis: 0.6
+    supports_majors:
+      - Business Administration
+      - Marketing
+      - Finance
+    supports_careers:
+      - BUSINESS-DEVELOPMENT
+      - SALES
+      - FINANCE
+  - name: Student HR Internship
+    description: Early exposure to recruiting, policy, and employee-support workflows.
+    develops_skills:
+      Human Resources Management: 0.8
+      Recruitment: 0.8
+      Communication: 0.6
+      Interpersonal Skills: 0.6
+    supports_majors:
+      - Human Resource Management
+      - Business Administration
+    supports_careers:
+      - HR
+      - Human Resources Specialists
+  - name: Investment Club
+    description: Collaborative analysis of markets, firms, and financial decisions.
+    develops_skills:
+      Financial Analysis: 0.8
+      Mathematics: 0.5
+      Communication: 0.4
+    supports_majors:
+      - Finance
+      - Business Administration
+    supports_careers:
+      - FINANCE
+  - name: Sales Pitch Competition
+    description: Persuasive presentation and customer-facing communication practice.
+    develops_skills:
+      Sales Communication: 0.8
+      Communication: 0.8
+      Interpersonal Skills: 0.6
+    supports_majors:
+      - Marketing
+      - Business Administration
+    supports_careers:
+      - SALES
+      - BUSINESS-DEVELOPMENT

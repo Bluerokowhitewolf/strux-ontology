@@ -1,0 +1,231 @@
+skills:
+  - name: Web Development
+    aliases:
+      - Web based project develop
+    description: Building browser-based applications and services.
+    prerequisites:
+      Programming: 1.0
+      Critical Thinking: 0.7
+      Complex Problem Solving: 0.8
+      Systems Analysis: 0.6
+  - name: Mobile App Development
+    aliases:
+      - Android App Develop
+    description: Designing and implementing mobile applications.
+    prerequisites:
+      Programming: 1.0
+      Critical Thinking: 0.7
+      Complex Problem Solving: 0.7
+      Systems Analysis: 0.6
+  - name: Data Analysis and Visualization
+    aliases:
+      - Data Analysis andVisualization
+    description: Turning data into interpretable insight and visual explanation.
+    prerequisites:
+      Mathematics: 0.9
+      Critical Thinking: 0.8
+      Programming: 0.7
+      Judgment and Decision Making: 0.5
+  - name: Data Engineering
+    description: Building and maintaining data pipelines and data infrastructure.
+    prerequisites:
+      Programming: 0.9
+      Systems Analysis: 0.8
+      Systems Evaluation: 0.7
+      Operations Analysis: 0.6
+  - name: Machine Learning
+    aliases:
+      - Artificial Intelligence (AI) and Machine Learning
+      - Research on Artificial Intelligence and Machine learning
+    description: Statistical learning and predictive modeling.
+    prerequisites:
+      Programming: 0.9
+      Mathematics: 0.9
+      Critical Thinking: 0.8
+      Systems Analysis: 0.6
+  - name: Deep Learning
+    aliases:
+      - Deeplearning
+      - deepelearning
+    description: Neural-network-centered machine learning techniques.
+    prerequisites:
+      Machine Learning: 1.0
+      Programming: 0.8
+      Mathematics: 0.8
+  - name: Artificial Intelligence (AI)
+    description: Applied AI systems and intelligent computation.
+    prerequisites:
+      Machine Learning: 0.9
+      Programming: 0.8
+      Critical Thinking: 0.7
+  - name: Cloud Computing
+    description: Deploying and operating networked compute platforms and services.
+    prerequisites:
+      Systems Analysis: 0.8
+      Systems Evaluation: 0.8
+      Programming: 0.7
+      Operations Analysis: 0.6
+  - name: Cybersecurity
+    description: Securing systems, networks, and digital assets.
+    prerequisites:
+      Programming: 0.7
+      Critical Thinking: 0.8
+      Systems Analysis: 0.8
+      Judgment and Decision Making: 0.6
+  - name: Network Security
+    description: Securing network infrastructure and traffic.
+    prerequisites:
+      Cybersecurity: 1.0
+      Systems Analysis: 0.7
+      Systems Evaluation: 0.7
+  - name: Operating Systems and Networking
+    aliases:
+      - Computer Network
+      - Network Topologies
+    description: Working knowledge of systems, networking, and infrastructure.
+    prerequisites:
+      Systems Analysis: 0.8
+      Systems Evaluation: 0.7
+      Troubleshooting: 0.6
+  - name: Database Development
+    description: Designing, querying, and maintaining database systems.
+    prerequisites:
+      Programming: 0.8
+      Mathematics: 0.5
+      Systems Analysis: 0.7
+      Operations Analysis: 0.5
+  - name: System Design
+    description: Designing system architecture and component interaction.
+    prerequisites:
+      Systems Analysis: 0.9
+      Systems Evaluation: 0.8
+      Critical Thinking: 0.8
+      Complex Problem Solving: 0.8
+  - name: API Testing
+    aliases:
+      - API Knowledge
+    description: Testing service interfaces and integration behavior.
+    prerequisites:
+      Programming: 0.7
+      Quality Control Analysis: 0.8
+      Troubleshooting: 0.6
+  - name: Performance Testing
+    description: Evaluating throughput, latency, and runtime stability.
+    prerequisites:
+      Quality Control Analysis: 0.8
+      Systems Evaluation: 0.8
+      Troubleshooting: 0.6
+  - name: Feature Engineering
+    aliases:
+      - Feature Generation
+    description: Designing variables and representations for analytical models.
+    prerequisites:
+      Mathematics: 0.8
+      Critical Thinking: 0.8
+      Programming: 0.7
+  - name: Statistical Analysis
+    aliases:
+      - Statistical Analogy
+      - Statistician
+    description: Quantitative inference, estimation, and model-based analysis.
+    prerequisites:
+      Mathematics: 0.9
+      Critical Thinking: 0.7
+      Programming: 0.5
+  - name: Big Data Technologies
+    description: Distributed data platforms and large-scale analytical processing.
+    prerequisites:
+      Data Engineering: 0.9
+      Cloud Computing: 0.7
+      Programming: 0.7
+  - name: Blockchain
+    description: Distributed ledger systems and trust architectures.
+    prerequisites:
+      Programming: 0.8
+      Critical Thinking: 0.7
+      Systems Analysis: 0.7
+  - name: Robotics Knowledge
+    description: Integrated hardware-software reasoning for robotic systems.
+    prerequisites:
+      Programming: 0.8
+      Systems Analysis: 0.7
+      Mathematics: 0.7
+  - name: UI/UX Knowledge
+    aliases:
+      - User Experience (UX) and User Interface (UI) Design
+    description: User-centered interface and experience design.
+    prerequisites:
+      Design: 0.8
+      Active Listening: 0.6
+      Critical Thinking: 0.6
+      Speaking: 0.5
+  - name: Graphic Design
+    description: Visual communication through composition, hierarchy, and form.
+    prerequisites:
+      Design: 0.9
+      Active Listening: 0.5
+      Critical Thinking: 0.5
+  - name: Project Management
+    description: Coordinating resources, deadlines, and scope.
+    prerequisites:
+      Coordination: 0.9
+      Time Management: 0.8
+      Monitoring: 0.7
+      Judgment and Decision Making: 0.6
+  - name: Problem Solving and Analysis
+    aliases:
+      - ProblemSolving
+    description: Structured diagnosis and solution design.
+    prerequisites:
+      Critical Thinking: 0.9
+      Complex Problem Solving: 1.0
+      Systems Analysis: 0.6
+  - name: Communication
+    description: Clear written and spoken transmission of meaning.
+    prerequisites:
+      Speaking: 0.9
+      Writing: 0.8
+      Active Listening: 0.8
+  - name: Interpersonal Skills
+    description: Working effectively with other people and teams.
+    prerequisites:
+      Social Perceptiveness: 0.9
+      Coordination: 0.7
+      Active Listening: 0.7
+  - name: Adaptability
+    description: Adjusting effectively under changing demands.
+    prerequisites:
+      Active Learning: 0.7
+      Learning Strategies: 0.6
+      Monitoring: 0.5
+  - name: Human Resources Management
+    description: People operations, policy, and employee lifecycle work.
+    prerequisites:
+      Active Listening: 0.8
+      Speaking: 0.7
+      Social Perceptiveness: 0.8
+      Management of Personnel Resources: 0.9
+  - name: Recruitment
+    description: Sourcing, screening, and selecting talent.
+    prerequisites:
+      Social Perceptiveness: 0.8
+      Speaking: 0.7
+      Active Listening: 0.7
+  - name: Payroll Administration
+    description: Compensation processing and policy compliance.
+    prerequisites:
+      Mathematics: 0.6
+      Monitoring: 0.7
+      Judgment and Decision Making: 0.5
+  - name: Financial Analysis
+    description: Evaluating financial position, risk, and performance.
+    prerequisites:
+      Mathematics: 0.9
+      Critical Thinking: 0.8
+      Judgment and Decision Making: 0.8
+  - name: Sales Communication
+    description: Persuasion and relationship-building in sales settings.
+    prerequisites:
+      Speaking: 0.9
+      Persuasion: 0.9
+      Social Perceptiveness: 0.7

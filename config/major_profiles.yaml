@@ -1,0 +1,101 @@
+majors:
+  - name: Computer Science
+    description: Software systems, computing theory, and applied development.
+    develops_skills:
+      Programming: 1.0
+      Web Development: 0.8
+      Mobile App Development: 0.7
+      System Design: 0.8
+      Database Development: 0.7
+      Cloud Computing: 0.6
+      Problem Solving and Analysis: 0.8
+    career_targets:
+      - Software Development and Engineering
+      - Development
+  - name: Data Science
+    description: Statistical reasoning, machine learning, and data interpretation.
+    develops_skills:
+      Data Analysis and Visualization: 1.0
+      Machine Learning: 0.9
+      Deep Learning: 0.7
+      Feature Engineering: 0.8
+      Statistical Analysis: 0.8
+      Data Engineering: 0.7
+      Communication: 0.5
+    career_targets:
+      - Data Science
+      - Artificial Intelligence
+  - name: Cybersecurity
+    description: Secure systems, networks, risk controls, and digital defense.
+    develops_skills:
+      Cybersecurity: 1.0
+      Network Security: 0.9
+      Operating Systems and Networking: 0.8
+      Problem Solving and Analysis: 0.7
+      Cloud Computing: 0.5
+    career_targets:
+      - Security
+  - name: Information Systems
+    description: Business-facing technology systems, processes, and platforms.
+    develops_skills:
+      System Design: 0.8
+      Database Development: 0.8
+      Project Management: 0.7
+      Cloud Computing: 0.6
+      Communication: 0.6
+      Business Analysis: 0.5
+    career_targets:
+      - Development
+      - INFORMATION-TECHNOLOGY
+  - name: Business Administration
+    description: Organizational coordination, management, and strategic execution.
+    develops_skills:
+      Project Management: 0.9
+      Communication: 0.8
+      Interpersonal Skills: 0.7
+      Financial Analysis: 0.6
+      Adaptability: 0.5
+    career_targets:
+      - BUSINESS-DEVELOPMENT
+      - SALES
+  - name: Human Resource Management
+    description: Human capital, organizational process, and employee lifecycle support.
+    develops_skills:
+      Human Resources Management: 1.0
+      Recruitment: 0.8
+      Payroll Administration: 0.6
+      Communication: 0.7
+      Interpersonal Skills: 0.8
+      Project Management: 0.5
+    career_targets:
+      - HR
+      - Human Resources Specialists
+  - name: Finance
+    description: Financial accounting, valuation, and resource allocation.
+    develops_skills:
+      Financial Analysis: 1.0
+      Mathematics: 0.8
+      Critical Thinking: 0.7
+      Communication: 0.4
+    career_targets:
+      - FINANCE
+  - name: Marketing
+    description: Market analysis, persuasion, positioning, and commercial messaging.
+    develops_skills:
+      Communication: 0.9
+      Sales Communication: 0.8
+      Interpersonal Skills: 0.7
+      Project Management: 0.5
+      Graphic Design: 0.4
+    career_targets:
+      - SALES
+      - BUSINESS-DEVELOPMENT
+  - name: Graphic Design and UX
+    description: Visual communication, interface design, and user-centered problem framing.
+    develops_skills:
+      Graphic Design: 1.0
+      UI/UX Knowledge: 0.9
+      Communication: 0.5
+      Critical Thinking: 0.5
+    career_targets:
+      - User Experience (UX) and User Interface (UI) Design

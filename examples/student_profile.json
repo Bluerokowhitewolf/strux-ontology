@@ -1,0 +1,43 @@
+{
+  "name": "Sample Student",
+  "free_text": "수학적 사고로 알고리즘 문제를 해결하는 것이 즐겁고, 데이터 분석 프로젝트와 연구 프로젝트에 몰입합니다. 데이터 과학 전공과 데이터 사이언티스트 진로에 관심이 있습니다.",
+  "skills": [
+    {
+      "name": "Data Analysis and Visualization",
+      "level": 0.9
+    },
+    {
+      "name": "Machine Learning",
+      "level": 0.8
+    },
+    {
+      "name": "Programming",
+      "level": 0.7
+    },
+    {
+      "name": "Communication",
+      "level": 0.6
+    }
+  ],
+  "activities": [
+    "Data Analysis Project",
+    "Research Project"
+  ],
+  "career_interests": [
+    "Data Science",
+    "Artificial Intelligence"
+  ],
+  "major_interests": [
+    "Data Science",
+    "Computer Science"
+  ],
+  "traits": [
+    "Investigative",
+    "Innovation"
+  ],
+  "preferred_job_zones": [
+    4,
+    5
+  ],
+  "top_k": 5
+}

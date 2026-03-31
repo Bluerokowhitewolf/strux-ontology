@@ -1,0 +1,12 @@
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+src/strux.egg-info/
+
+/data/runtime/**
+/data/reference/**
+!/data/runtime/.gitkeep
+!/data/reference/.gitkeep
+!/data/reference/onet/
+!/data/reference/onet/.gitkeep

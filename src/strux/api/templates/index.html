@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}" />
+    <script defer src="{{ url_for('static', path='/app.js') }}"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar-block topbar-title">
+          <p class="section-kicker">STRUX OPS</p>
+          <h1>학생 진로 의미 구조 탐색기</h1>
+          <p class="topbar-copy">
+            학생·역량·전공·활동·진로의 관계를 정적 카드가 아니라 운영 가능한 의미 구조로 탐색합니다.
+          </p>
+        </div>
+        <div class="topbar-block topbar-metrics">
+          <div class="metric-box">
+            <span class="metric-label">시스템 원리</span>
+            <strong>raw → interpretation → ontology → decision support</strong>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">온톨로지 규모</span>
+            <strong id="summary-loading">구조 정보 불러오는 중</strong>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">운영 상태</span>
+            <strong id="result-caption">아직 분석을 실행하지 않았습니다.</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="ops-layout">
+        <aside class="ops-panel left-panel">
+          <section class="panel-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Input</p>
+                <h2>학생 상태 입력</h2>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>학생 이름</span>
+              <input id="student-name" type="text" placeholder="예: 김민서" />
+            </label>
+
+            <label class="field">
+              <span>자유 서술 입력</span>
+              <textarea
+                id="free-text"
+                rows="5"
+                placeholder="예: 수학적 사고로 알고리즘 문제를 해결하는 것이 즐겁고, 통계 프로젝트를 할 때 가장 몰입됩니다."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>보유 역량</span>
+              <textarea id="skills" rows="3" placeholder="예: 파이썬, 통계 분석, 문제 해결"></textarea>
+            </label>
+
+            <label class="field">
+              <span>활동 경험</span>
+              <textarea
+                id="activities"
+                rows="3"
+                placeholder="예: Data Analysis Project, Research Project"
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>관심 진로</span>
+              <textarea
+                id="career-interests"
+                rows="3"
+                placeholder="예: Data Science, Artificial Intelligence"
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>관심 전공</span>
+              <textarea
+                id="major-interests"
+                rows="2"
+                placeholder="예: Data Science, Computer Science"
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>성향 단서</span>
+              <textarea id="traits" rows="2" placeholder="예: Investigative, Innovation"></textarea>
+            </label>
+
+            <fieldset class="field zone-field">
+              <legend>선호 준비도</legend>
+              <div class="zone-options">
+                <label><input type="checkbox" name="job-zone" value="3" /> Job Zone 3</label>
+                <label><input type="checkbox" name="job-zone" value="4" /> Job Zone 4</label>
+                <label><input type="checkbox" name="job-zone" value="5" /> Job Zone 5</label>
+              </div>
+            </fieldset>
+
+            <div class="button-row">
+              <button id="load-example" class="secondary-button" type="button">예시 불러오기</button>
+              <button id="reset-form" class="ghost-button" type="button">입력 비우기</button>
+              <button id="run-analysis" class="primary-button" type="button">구조 분석 실행</button>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Filter</p>
+                <h2>관계 필터</h2>
+              </div>
+            </div>
+
+            <label class="field compact-field">
+              <span>노드 검색</span>
+              <input id="node-search" type="text" placeholder="노드 이름 검색" />
+            </label>
+
+            <div class="filter-grid">
+              <label><input type="checkbox" data-node-filter="student" checked /> 학생</label>
+              <label><input type="checkbox" data-node-filter="skill" checked /> 역량</label>
+              <label><input type="checkbox" data-node-filter="activity" checked /> 활동</label>
+              <label><input type="checkbox" data-node-filter="major" checked /> 전공</label>
+              <label><input type="checkbox" data-node-filter="career" checked /> 진로</label>
+              <label><input type="checkbox" data-node-filter="trait" checked /> 성향</label>
+            </div>
+
+            <p class="panel-note">
+              노드를 선택하면 인접 맥락만 남기고 나머지 구조는 희미하게 처리합니다.
+            </p>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Focus</p>
+                <h2>퀵 포커스</h2>
+              </div>
+            </div>
+
+            <div class="focus-group">
+              <p class="subheading">상위 진로</p>
+              <div id="quick-focus-careers" class="focus-list empty-state">
+                분석 후 주요 진로 노드를 바로 선택할 수 있습니다.
+              </div>
+            </div>
+
+            <div class="focus-group">
+              <p class="subheading">권장 전공</p>
+              <div id="quick-focus-majors" class="focus-list empty-state"></div>
+            </div>
+
+            <div class="focus-group">
+              <p class="subheading">권장 활동</p>
+              <div id="quick-focus-activities" class="focus-list empty-state"></div>
+            </div>
+
+            <div class="focus-group">
+              <p class="subheading">핵심 역량</p>
+              <div id="quick-focus-skills" class="focus-list empty-state"></div>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Action</p>
+                <h2>가상 시뮬레이션</h2>
+              </div>
+            </div>
+
+            <p class="panel-note">
+              활동 노드를 가상으로 주입하면 그래프 아래 출력 영역에서 영향 표가 바로 갱신됩니다.
+            </p>
+
+            <label class="field compact-field">
+              <span>가상으로 주입할 활동</span>
+              <input id="action-activity-input" type="text" placeholder="예: Research Project" />
+            </label>
+
+            <div id="action-suggestions" class="focus-list empty-state">
+              분석 후 추천 활동이 여기 표시됩니다.
+            </div>
+
+            <div class="button-row single-button-row">
+              <button id="run-action-simulation" class="primary-button" type="button">가상 활동 주입</button>
+            </div>
+
+            <label class="field compact-field">
+              <span>시뮬레이션 정렬</span>
+              <select id="impact-sort">
+                <option value="delta_desc">적합도 상승순</option>
+                <option value="rank_best">시뮬레이션 순위순</option>
+                <option value="name_asc">이름순</option>
+              </select>
+            </label>
+          </section>
+        </aside>
+
+        <section class="ops-panel center-panel">
+          <section class="panel-section graph-section">
+            <div class="section-head graph-head">
+              <div>
+                <p class="section-kicker">Graph</p>
+                <h2>온톨로지 그래프</h2>
+                <p id="graph-caption" class="panel-note">
+                  학생 상태를 분석하면 중심 그래프가 생성되고, 노드 선택에 따라 맥락이 재정렬됩니다.
+                </p>
+              </div>
+              <div class="graph-head-side">
+                <div class="graph-legend">
+                  <span class="legend-item"><i class="legend-dot student"></i>학생</span>
+                  <span class="legend-item"><i class="legend-dot skill"></i>역량</span>
+                  <span class="legend-item"><i class="legend-dot bridge"></i>브리지</span>
+                  <span class="legend-item"><i class="legend-dot structure"></i>전공·활동</span>
+                  <span class="legend-item"><i class="legend-dot career"></i>진로</span>
+                </div>
+                <div class="graph-tools">
+                  <button id="zoom-out" class="ghost-button" type="button">축소</button>
+                  <button id="zoom-reset" class="ghost-button" type="button">기본</button>
+                  <button id="zoom-in" class="ghost-button" type="button">확대</button>
+                  <button id="graph-expand" class="ghost-button" type="button">모달 열기</button>
+                  <span id="zoom-level" class="zoom-level">100%</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="graph-stage" class="graph-stage">
+              <div id="graph-modal-bar" class="graph-modal-bar hidden">
+                <strong>확대 그래프 탐색</strong>
+                <button id="graph-modal-close" class="ghost-button" type="button">닫기</button>
+              </div>
+              <div id="graph-canvas" class="graph-canvas">
+                <svg id="ontology-graph" viewBox="0 0 1200 860" preserveAspectRatio="xMidYMid meet"></svg>
+              </div>
+              <div id="graph-empty" class="graph-empty">
+                아직 그래프가 없습니다. 왼쪽에서 학생 상태를 입력하고 구조 분석을 실행해 주세요.
+              </div>
+              <div id="graph-tooltip" class="graph-tooltip hidden"></div>
+            </div>
+
+            <div class="graph-footer">
+              <div id="graph-focus-summary" class="footer-block">
+                포커스가 없을 때는 전체 관계망이 보입니다.
+              </div>
+              <div id="graph-stats" class="footer-block">
+                노드와 관계 수가 여기에 표시됩니다.
+              </div>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Output</p>
+                <h2>분석 출력</h2>
+              </div>
+            </div>
+
+            <div class="center-output-grid">
+              <div class="output-pane">
+                <p class="list-title">구조 결과</p>
+                <div id="report-overview" class="detail-stack empty-state">
+                  분석 후 대표 진로, 전공, 활동이 운영 표 형태로 정리됩니다.
+                </div>
+              </div>
+              <div class="output-pane">
+                <p class="list-title">시뮬레이션 결과</p>
+                <p id="action-summary" class="panel-note">
+                  활동 노드를 가상으로 주입해 진로와 역량 구조가 어떻게 재배열되는지 확인할 수 있습니다.
+                </p>
+                <div id="action-results" class="detail-stack empty-state">
+                  아직 시뮬레이션 결과가 없습니다.
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <aside class="ops-panel right-panel">
+          <section class="panel-section detail-section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Detail</p>
+                <h2>선택 노드</h2>
+              </div>
+              <button id="clear-focus" class="ghost-button" type="button">포커스 해제</button>
+            </div>
+            <div id="selection-summary" class="selection-summary empty-state">
+              노드를 선택하면 핵심 요약이 이 영역에 고정됩니다.
+            </div>
+            <div id="selection-details" class="detail-stack empty-state">
+              그래프 노드를 선택하면 의미 맥락, 연결 관계, 준비도 경로가 이 영역에 표시됩니다.
+            </div>
+          </section>
+        </aside>
+      </main>
+      <div id="graph-modal-backdrop" class="graph-modal-backdrop hidden"></div>
+    </div>
+  </body>
+</html>
