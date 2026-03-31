@@ -69,7 +69,7 @@ These do not pretend to be raw truth. They are explicit interpretation artifacts
 ## Run
 
 ```bash
-cd /Users/seungkyuroh/Desktop/Strux
+cd /Users/000000/Desktop/Strux
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
 export OPENAI_API_KEY="your-api-key"
