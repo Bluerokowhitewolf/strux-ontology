@@ -79,7 +79,7 @@ These do not pretend to be raw truth. They are explicit interpretation artifacts
 ## Run
 
 ```bash
-cd /Users/000000/Desktop/Strux
+cd strux
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
 export OPENAI_API_KEY="your-api-key"
@@ -104,7 +104,7 @@ PYTHONPATH=src python -m strux summary
 Demo recommendation:
 
 ```bash
-cd /Users/seungkyuroh/Desktop/Strux
+cd strux
 source .venv/bin/activate
 PYTHONPATH=src python -m strux recommend examples/student_profile.json
 ```
@@ -112,7 +112,7 @@ PYTHONPATH=src python -m strux recommend examples/student_profile.json
 Profile interpretation:
 
 ```bash
-cd /Users/seungkyuroh/Desktop/Strux
+cd strux
 source .venv/bin/activate
 export OPENAI_API_KEY="your-api-key"
 PYTHONPATH=src python -m strux interpret examples/student_profile.json
