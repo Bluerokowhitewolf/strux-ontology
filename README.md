@@ -96,7 +96,7 @@ Open:
 Ontology summary:
 
 ```bash
-cd /Users/seungkyuroh/Desktop/Strux
+cd strux
 source .venv/bin/activate
 PYTHONPATH=src python -m strux summary
 ```
